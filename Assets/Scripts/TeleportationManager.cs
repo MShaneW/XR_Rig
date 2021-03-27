@@ -9,6 +9,7 @@ public class TeleportationManager : MonoBehaviour
     [SerializeField] private InputActionAsset actionAsset;
     [SerializeField] private XRRayInteractor rayInteractor;
     [SerializeField] private TeleportationProvider provider;
+    public GameObject reticle;
 
     private InputAction _thumbstick;
     private bool _isActive;
@@ -17,6 +18,9 @@ public class TeleportationManager : MonoBehaviour
     void Start()
     {
         rayInteractor.enabled = false;
+        reticle.SetActive(false);
+     
+        
 
         var activate = actionAsset.FindActionMap("XRI LeftHand").FindAction("Teleport Mode Activate");
         activate.Enable();
@@ -46,6 +50,7 @@ public class TeleportationManager : MonoBehaviour
         if (!rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
             rayInteractor.enabled = false;
+            reticle.SetActive(false);
             _isActive = false;
             return;
 
@@ -60,6 +65,7 @@ public class TeleportationManager : MonoBehaviour
         provider.QueueTeleportRequest(request);
 
         rayInteractor.enabled = false;
+        reticle.SetActive(false);
         _isActive = false;
         
     }
@@ -67,12 +73,14 @@ public class TeleportationManager : MonoBehaviour
     private void OnTeleportActivate(InputAction.CallbackContext context)
     {
         rayInteractor.enabled = true;
+        reticle.SetActive(true);
         _isActive = true;
     }
 
     private void OnTeleportCancel(InputAction.CallbackContext context)
     {
         rayInteractor.enabled = false;
+        reticle.SetActive(false);
         _isActive = false;
     }
 }
