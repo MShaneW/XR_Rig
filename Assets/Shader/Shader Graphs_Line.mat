@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_DottedLine
-  m_Shader: {fileID: -6465566751694194690, guid: c2fda4ca5ec627243ab95bd382c98f40, type: 3}
+  m_Name: Shader Graphs_Line
+  m_Shader: {fileID: -6465566751694194690, guid: 110c11519ab78a047ba7263fc00f9fdf, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,8 +19,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_b1801f03a2794676b64d97c1d861bb71:
-        m_Texture: {fileID: 2800000, guid: 39b1a4058a170444e8c2740c3138c69f, type: 3}
+    - Texture2D_a0331f6f3853428cb32b69305408ca9c:
+        m_Texture: {fileID: 2800000, guid: 8b307b4e223d3794c927eced210d2a32, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -37,5 +37,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Vector2_fffb1f8069c94625ab4ba4162a8e5795: {r: -2, g: 0, b: 0, a: 0}
+    - Vector2_93f7cfb13db043949cb0dd9414bafe5f: {r: -2, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
